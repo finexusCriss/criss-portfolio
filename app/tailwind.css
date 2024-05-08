@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../public/fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif JP Light";
+  src: url("../public/fonts/NotoSerifJP-Light.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif JP Regular";
+  src: url("../public/fonts/NotoSerifJP-Regular.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif JP Medium";
+  src: url("../public/fonts/NotoSerifJP-Medium.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif JP SemiBold";
+  src: url("../public/fonts/NotoSerifJP-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif JP Bold";
+  src: url("../public/fonts/NotoSerifJP-Bold.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif JP Black";
+  src: url("../public/fonts/NotoSerifJP-Black.otf");
+}
