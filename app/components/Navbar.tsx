@@ -67,7 +67,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="lg:hidden ">
+        <div className="md:hidden ">
           <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
           {isOpen && (
             <>
