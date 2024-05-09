@@ -76,7 +76,8 @@ export default function Navbar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className={`fixed left-0 right-0 top-[${navBarHeight}rem] p-5 bg-[#367bc1] z-50`}
+                // className={`fixed left-0 right-0 top-[${navBarHeight}rem] p-5 bg-[#367bc1] z-50`}
+                className={`fixed left-0 right-0 top-[5.5rem] p-5 bg-[#367bc1] z-50`}
               >
                 <div className='grid gap-3 place-items-center text-center font-notoSerifJPMedium'>
                   <Link to='/about' className='border-b-0.8 border-white pb-2 w-full' onClick={() => setOpen(false)}>
