@@ -18,14 +18,15 @@ import AWSDynamoDBIcon from '../assets/images/techIcon/AWSDynamoDB.png';
 import FigmaIcon from '../assets/images/techIcon/FigmaTechStack.png';
 import PortainerIcon from '../assets/images/techIcon/PortainerIcon.png';
 
-// ProjectCover
-import FLCover from '../assets/images/FaceLiveness.png';
 import ProjPrevCard from '~/components/ProjectPreviewCard';
-import ESig from '../assets/images/ElectronicSignature.png';
-import Fido2Cover from '../assets/images/Fido2Cover.png';
-import DigIden from '../assets/images/DigitalIdentity.png';
-import TraIti from '../assets/images/TravelItinerary.png';
-import TraBud from '../assets/images/TravelBudgetApp.png';
+import MainLightBlueBg from '~/components/layout/MainLightBlueBg';
+import BigTitleText from '~/components/typography/BigTitleText';
+import TitleSupportText from '~/components/typography/TitleSupportText';
+import BodyText from '~/components/typography/BodyText';
+import SecondaryBlueBg from '~/components/layout/SecondaryBlueBg';
+import SecondTitleText from '~/components/typography/SecondTitleText';
+import BodyLightBlueBg from '~/components/layout/BodyLightBlueBg';
+import projectList from '~/data/projectList';
 
 export default function About() {
 
@@ -90,17 +91,25 @@ export default function About() {
 
   return (
     <>
-      <div className="bg-background-light-blue px-40 py-10 grid gap-6 grid-cols-2 justify-center items-center drop-shadow-md">
+      {/* Top main section */}
+      <MainLightBlueBg>
         {/* Main Text */}
         <div className=''>
-          <div className="text-text-title-dark-blue text-2xl font-notoSerifJPBlack mb-2">About me</div>
-          <div className="text-text-title-dark-blue font-notoSerifJPLight mb-4">I’m a front end developer based in Kuala Lumpur, Malaysia</div>
-          <div className="text-text-title-dark-blue font-notoSerifJPMedium">Solving intricate mathematical and logical problems has always held a fascination for me, while designing and coding an elegant user interface that provides a good user experience brings me joy in my role as a front-end developer.</div>
+          <BigTitleText
+            text='About me'
+          />
+          <TitleSupportText
+            text='I’m a front end developer based in Kuala Lumpur, Malaysia and I love my gf!!!'
+          />
+          <BodyText
+            text='Solving intricate mathematical and logical problems has always held a fascination for me, while designing and coding an elegant user interface that provides a good user experience brings me joy in my role as a front-end developer.'
+          />
         </div>
         {/* Illustration */}
         <img src={AboutMe} alt="AboutMeIllustration" className='px-16' />
-      </div>
-      <div className='bg-background-second-blue px-40 py-20 flex flex-col justify-center items-center border-b-0.8 border-separator-blue'>
+      </MainLightBlueBg>
+
+      <SecondaryBlueBg>
         {/* Tech Icon Box */}
         <div className='grid grid-rows-2 grid-cols-7 gap-2 mb-12'>
           {techStackArr.map((tech, index) => (
@@ -111,42 +120,32 @@ export default function About() {
             />
           ))}
         </div>
-        <div className="text-text-title-dark-blue text-xl font-notoSerifJPBlack mb-2 text-center">My Tech Stack</div>
-        <div className="text-text-title-dark-blue font-notoSerifJPMedium w-3/4">Working in a R&D team has exposed me to variety type of language and framework that I have to learn fast to develop the solution requested. Typescript in ReactJS is the one that I have been using the most in my experience.</div>
-      </div>
-      <div className="bg-background-light-blue px-40 py-10 flex flex-col justify-center items-center">
-        <img src={ProjectIcon} alt="MyProjectIcon" className='w-48' />
-        <div className="text-text-title-dark-blue text-xl font-notoSerifJPBlack mb-2 text-center">My Projects</div>
-        <div className="text-text-title-dark-blue font-notoSerifJPMedium mb-6">Click to view my past and ongoing projects</div>
-
-        {/* Project Preview Card */}
-        <div className='grid grid-rows-2 grid-cols-3 gap-4'>
-          <ProjPrevCard
-            projectName='Face Liveness Verification'
-            imgSrc={FLCover}
-          />
-          <ProjPrevCard
-            projectName='Electronic Signature'
-            imgSrc={ESig}
-          />
-          <ProjPrevCard
-            projectName='FIDO2'
-            imgSrc={Fido2Cover}
-          />
-          <ProjPrevCard
-            projectName='Digital Identity'
-            imgSrc={DigIden}
-          />
-          <ProjPrevCard
-            projectName='Travel Itinerary Web App'
-            imgSrc={TraIti}
-          />
-          <ProjPrevCard
-            projectName='Travel Budget Web App'
-            imgSrc={TraBud}
+        <SecondTitleText
+          text='My Tech Stack'
+        />
+        <div className='w-3/4'>
+          <BodyText
+            text='Working in a R&D team has exposed me to variety type of language and framework that I have to learn fast to develop the solution requested. Typescript in ReactJS is the one that I have been using the most in my experience.'
           />
         </div>
-      </div>
+      </SecondaryBlueBg>
+
+      <BodyLightBlueBg>
+        <img src={ProjectIcon} alt="MyProjectIcon" className='w-48' />
+        <SecondTitleText text='My Projects' />
+        <BodyText text='Click to view my past and ongoing projects' />
+
+        {/* Project Preview Card */}
+        <div className='grid grid-rows-2 grid-cols-3 gap-4 mt-6'>
+          {projectList.map((project, index) => (
+            <ProjPrevCard
+              projectName={project.projectName}
+              imgSrc={project.projectCoverImg}
+              route={project.route}
+            />
+          ))}
+        </div>
+      </BodyLightBlueBg>
     </>
   )
 }
