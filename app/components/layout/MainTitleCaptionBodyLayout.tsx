@@ -16,7 +16,7 @@ export default function MainTitleCaptionBodyLayout({
   body
 }: Props) {
   return (
-    <div className="px-16">
+    <div className="lg:px-16">
       <BigTitleText text={mainTitleLineOne} />
       {
         mainTitleLineTwo &&

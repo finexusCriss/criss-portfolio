@@ -25,7 +25,7 @@ export default function FaceLiveness() {
           body='The purpose of face liveness verification is to ensure that the person in front of the camera is a real person instead of a photo, video or any other non-living representation.'
         />
 
-        <div className="px-16">
+        <div className="lg:px-16">
           <img src={FaceLivenessCover} alt="Faceliveness cover photo" />
         </div>
       </MainLightBlueBg>

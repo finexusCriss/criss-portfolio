@@ -6,7 +6,7 @@ interface Props {
 
 export default function BodyTextContainer({ text }: Props) {
   return (
-    <div className='w-3/4'>
+    <div className='w-full lg:w-3/4'>
       <BodyText
         text={text}
       />

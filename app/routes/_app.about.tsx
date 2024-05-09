@@ -27,6 +27,7 @@ import SecondaryBlueBg from '~/components/layout/SecondaryBlueBg';
 import SecondTitleText from '~/components/typography/SecondTitleText';
 import BodyLightBlueBg from '~/components/layout/BodyLightBlueBg';
 import projectList from '~/data/projectList';
+import BodyTextContainer from '~/components/layout/BodyTextContainer';
 
 export default function About() {
 
@@ -106,12 +107,12 @@ export default function About() {
           />
         </div>
         {/* Illustration */}
-        <img src={AboutMe} alt="AboutMeIllustration" className='px-16' />
+        <img src={AboutMe} alt="AboutMeIllustration" className='px-8 sm:px-12 lg:px-32' />
       </MainLightBlueBg>
 
       <SecondaryBlueBg>
         {/* Tech Icon Box */}
-        <div className='grid grid-rows-2 grid-cols-7 gap-2 mb-12'>
+        <div className='grid grid-cols-2 gap-2 mb-12 lg:grid-cols-7'>
           {techStackArr.map((tech, index) => (
             <TechIcon
               key={tech.techName}
@@ -123,11 +124,9 @@ export default function About() {
         <SecondTitleText
           text='My Tech Stack'
         />
-        <div className='w-3/4'>
-          <BodyText
-            text='Working in a R&D team has exposed me to variety type of language and framework that I have to learn fast to develop the solution requested. Typescript in ReactJS is the one that I have been using the most in my experience.'
-          />
-        </div>
+        <BodyTextContainer
+          text='Working in a R&D team has exposed me to variety type of language and framework that I have to learn fast to develop the solution requested. Typescript in ReactJS is the one that I have been using the most in my experience.'
+        />
       </SecondaryBlueBg>
 
       <BodyLightBlueBg>
@@ -136,7 +135,7 @@ export default function About() {
         <BodyText text='Click to view my past and ongoing projects' />
 
         {/* Project Preview Card */}
-        <div className='grid grid-rows-2 grid-cols-3 gap-4 mt-6'>
+        <div className='grid grid-rows-2 grid-cols-1 lg:grid-cols-3 gap-4 mt-6'>
           {projectList.map((project, index) => (
             <ProjPrevCard
               projectName={project.projectName}
