@@ -61,10 +61,12 @@ export default function Navbar() {
           <Link to='/contact'>
             <div>Contact</div>
           </Link>
-          <div className="flex justify-content items-center bg-white p-2 rounded-md">
-            <img src={ResumeImage} alt="ResumeIcon" className="w-4 mr-2 shadow-md" />
-            <div className="text-primary-blue">Resume</div>
-          </div>
+          <a href='/shared-assets/resume.pdf' target="_blank">
+            <div className="flex justify-content items-center bg-white p-2 rounded-md">
+              <img src={ResumeImage} alt="ResumeIcon" className="w-4 mr-2 shadow-md" />
+              <div className="text-primary-blue">Resume</div>
+            </div>
+          </a>
         </div>
 
         <div className="md:hidden ">
@@ -90,9 +92,9 @@ export default function Navbar() {
                   <Link to='/contact' className='border-b-0.8 border-white pb-2 w-full' onClick={() => setOpen(false)}>
                     Contact
                   </Link>
-                  <Link to='/about' onClick={() => setOpen(false)}>
+                  <a href='/shared-assets/resume.pdf' target="_blank" onClick={() => setOpen(false)}>
                     Resume
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             </>
