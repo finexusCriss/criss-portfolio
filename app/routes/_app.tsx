@@ -1,5 +1,7 @@
-import { MetaFunction, Outlet } from '@remix-run/react';
+import { Links, LiveReload, Meta, MetaFunction, Outlet, Scripts, ScrollRestoration, useRouteError } from '@remix-run/react';
+import { ReactNode } from 'react';
 import Navbar from '~/components/Navbar';
+import GeneralErrorPage from '~/error/GeneralErrorPage';
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,7 +13,7 @@ export const meta: MetaFunction = () => {
 export default function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Outlet />
     </>
   )

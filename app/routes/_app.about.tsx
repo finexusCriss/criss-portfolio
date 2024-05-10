@@ -1,4 +1,5 @@
-import TechIcon from '~/components/TechIcon';
+import { motion, Variants } from 'framer-motion';
+
 import AboutMe from '../assets/images/AboutMeIllus.png';
 import ProjectIcon from '../assets/images/MyProject.png';
 
@@ -18,6 +19,8 @@ import AWSDynamoDBIcon from '../assets/images/techIcon/AWSDynamoDB.png';
 import FigmaIcon from '../assets/images/techIcon/FigmaTechStack.png';
 import PortainerIcon from '../assets/images/techIcon/PortainerIcon.png';
 
+// Components
+import TechIcon from '~/components/TechIcon';
 import ProjPrevCard from '~/components/ProjectPreviewCard';
 import MainLightBlueBg from '~/components/layout/MainLightBlueBg';
 import BigTitleText from '~/components/typography/BigTitleText';
@@ -90,6 +93,33 @@ export default function About() {
     },
   ]
 
+  // Framer motion animation
+  const slideInFromRight: Variants = {
+    offscreen: {
+      x: 2000,
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 0.8
+      }
+    }
+  };
+
+  const slideInFromLeft: Variants = {
+    offscreen: {
+      x: -2000,
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 0.8
+      }
+    }
+  };
+
   return (
     <>
       {/* Top main section */}
@@ -112,15 +142,22 @@ export default function About() {
 
       <SecondaryBlueBg>
         {/* Tech Icon Box */}
-        <div className='grid grid-cols-2 gap-2 mb-12 lg:grid-cols-7'>
-          {techStackArr.map((tech, index) => (
-            <TechIcon
-              key={tech.techName}
-              techName={tech.techName}
-              imgSrc={tech.techIcon}
-            />
-          ))}
-        </div>
+        <motion.div
+          key='TechStackGrid'
+          initial={{ x: -2000 }} // Initial position of the icon
+          animate={{ x: 0 }} // Animation to move the icon to its original position
+          transition={{ duration: 0.5, delay: 0.1 }} // Adjust duration and delay as needed
+        >
+          <div className='grid grid-cols-2 gap-2 mb-12 lg:grid-cols-7'>
+            {techStackArr.map((tech, index) => (
+              <TechIcon
+                key={tech.techName}
+                techName={tech.techName}
+                imgSrc={tech.techIcon}
+              />
+            ))}
+          </div>
+        </motion.div>
         <SecondTitleText
           text='My Tech Stack'
         />
@@ -130,20 +167,40 @@ export default function About() {
       </SecondaryBlueBg>
 
       <BodyLightBlueBg>
-        <img src={ProjectIcon} alt="MyProjectIcon" className='w-48' />
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div
+            variants={slideInFromRight}
+          >
+            <img src={ProjectIcon} alt="MyProjectIcon" className='w-48' />
+          </motion.div>
+        </motion.div>
         <SecondTitleText text='My Projects' />
         <BodyText text='Click to view my past and ongoing projects' />
 
         {/* Project Preview Card */}
-        <div className='grid grid-rows-2 grid-cols-1 lg:grid-cols-3 gap-4 mt-6'>
-          {projectList.map((project, index) => (
-            <ProjPrevCard
-              projectName={project.projectName}
-              imgSrc={project.projectCoverImg}
-              route={project.route}
-            />
-          ))}
-        </div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 'some' }}
+        >
+          <motion.div
+            variants={slideInFromLeft}
+          >
+            <div className='grid grid-rows-2 grid-cols-1 lg:grid-cols-3 gap-4 mt-6'>
+              {projectList.map((project, index) => (
+                <ProjPrevCard
+                  projectName={project.projectName}
+                  imgSrc={project.projectCoverImg}
+                  route={project.route}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
       </BodyLightBlueBg>
     </>
   )
