@@ -4,6 +4,7 @@ import BodyText from "~/components/typography/BodyText";
 import EmailIcon from '../assets/images/GmailIcon.png';
 import LinkedInIcon from '../assets/images/LinkedInIcon.png';
 import ContactIllus from '../assets/images/Email.png';
+import { Link } from "@remix-run/react";
 
 export default function Contact() {
   return (
@@ -20,14 +21,18 @@ export default function Contact() {
               />
             </div>
             <div>
-              <div className="flex justify-start items-center mb-3">
-                <img src={EmailIcon} alt="" className="w-12 mr-3" />
-                <div className="font-notoSerifJPBold text-text-title-dark-blue">Email</div>
-              </div>
-              <div className="flex justify-start items-center">
-                <img src={LinkedInIcon} alt="" className="w-12 mr-3" />
-                <div className="font-notoSerifJPBold text-text-title-dark-blue">Linkedin</div>
-              </div>
+              <a href="mailto:chongjhuanghung@gmail.com" rel="noopener noreferrer" target="_blank">
+                <div className="flex justify-start items-center mb-3">
+                  <img src={EmailIcon} alt="" className="w-12 mr-3" />
+                  <div className="font-notoSerifJPBold text-text-title-dark-blue">Email</div>
+                </div>
+              </a>
+              <a href='https://www.linkedin.com/in/jhuang-hung-chong-b36aba164/' target="_blank" >
+                <div className="flex justify-start items-center">
+                  <img src={LinkedInIcon} alt="" className="w-12 mr-3" />
+                  <div className="font-notoSerifJPBold text-text-title-dark-blue">Linkedin</div>
+                </div>
+              </a>
             </div>
           </div>
 
