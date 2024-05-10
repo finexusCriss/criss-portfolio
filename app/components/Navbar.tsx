@@ -46,7 +46,7 @@ export default function Navbar() {
             <div>
               <img src={SiteLogo} alt="SiteLogo" className="w-12 mr-4" />
             </div>
-            <div className="font-pacifico text-2xl">TSY</div>
+            <div className="font-pacifico text-2xl">CJH</div>
           </div>
         </Link>
 

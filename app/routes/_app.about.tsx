@@ -142,7 +142,7 @@ export default function About() {
             text='About me'
           />
           <TitleSupportText
-            text='I’m a front end developer based in Kuala Lumpur, Malaysia and I love my gf!!!'
+            text='I’m a front end developer based in Kuala Lumpur, Malaysia.'
           />
           <BodyText
             text='Solving intricate mathematical and logical problems has always held a fascination for me, while designing and coding an elegant user interface that provides a good user experience brings me joy in my role as a front-end developer.'
