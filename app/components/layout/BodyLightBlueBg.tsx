@@ -16,7 +16,7 @@ export default function BodyLightBlueBg({ children, smallVerticalPadding }: Prop
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 'some' }}
       >
         <motion.div
           // variants={slideInFromRight}
