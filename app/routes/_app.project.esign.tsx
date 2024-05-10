@@ -3,10 +3,17 @@ import BodyLightBlueBg from "~/components/layout/BodyLightBlueBg";
 import MainLightBlueBg from "~/components/layout/MainLightBlueBg";
 import MainTitleCaptionBodyLayout from "~/components/layout/MainTitleCaptionBodyLayout";
 import SecondaryBlueBg from "~/components/layout/SecondaryBlueBg";
+import TechIcon from "~/components/TechIcon";
+import LightWide from "~/components/typography/LightWide";
 import ElecSigCov from "../assets/images/ElectonicSigProjCov.png";
 import PDFIcon from "../assets/images/PDF.png";
 import ReactPDFIcon from "../assets/images/ReactPDF.png";
 import ResizableIcon from "../assets/images/Resizable.png";
+import RemixIcon from '../assets/images/techIcon/Remix.png';
+import TailwindIcon from '../assets/images/techIcon/TailwindTechStack.png';
+import ReactJSIcon from '../assets/images/techIcon/React.png';
+import DockerIcon from '../assets/images/techIcon/Docker.png';
+
 
 export default function ElectronicSignature() {
   return (
@@ -45,6 +52,32 @@ export default function ElectronicSignature() {
           body='Signature canvas has one common problem that it will lose its content after resizing, which might be possible when user resizes the window. In this version, not only a watermark is drawn on the canvas, but the problem of vanishing signature is solved, no matter how you resize the signature is still there.'
         />
       </BodyLightBlueBg>
+
+      <SecondaryBlueBg>
+        <LightWide text='TECH USED'/>
+        <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-2">
+          <TechIcon
+            key='Remix'
+            techName='Remix'
+            imgSrc={RemixIcon}
+          />
+          <TechIcon
+            key='ReactJS'
+            techName='ReactJS'
+            imgSrc={ReactJSIcon}
+          />
+          <TechIcon
+            key='Tailwind'
+            techName='Tailwind'
+            imgSrc={TailwindIcon}
+          />
+          <TechIcon
+            key='Docker'
+            techName='Docker'
+            imgSrc={DockerIcon}
+          />
+        </div>
+      </SecondaryBlueBg>
     </>
   )
 }

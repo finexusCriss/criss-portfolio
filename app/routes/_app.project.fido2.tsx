@@ -12,6 +12,11 @@ import NodeJsIcon from "../assets/images/techIcon/NodeJS.png";
 import JavaIcon from "../assets/images/techIcon/Java.png";
 import DocumentationIcon from "../assets/images/Documentation.png";
 import SequenceDiagramIcon from "../assets/images/SequenceDiagram.png";
+import LightWide from "~/components/typography/LightWide";
+import SwiftUIIcon from '../assets/images/techIcon/SwiftUI.png';
+import RemixIcon from '../assets/images/techIcon/Remix.png';
+import ReactJSIcon from '../assets/images/techIcon/React.png';
+import SwiftIcon from '../assets/images/techIcon/Swift.png';
 
 export default function Fido2Proj() {
   return (
@@ -95,6 +100,32 @@ export default function Fido2Proj() {
           body='Since the FIDO2 implementation is entirely new to our company, I have dedicated time to studying the FIDO2 sequence diagram. From this study, I have developed an implementation architecture tailored to suit our company app use case. This process includes creating sequence diagrams and presenting them to superiors for feedback and review. Ultimately, this collaborative effort results in a finalized plan for implementation.'
         />
       </BodyLightBlueBg>
+
+      <SecondaryBlueBg>
+        <LightWide text='TECH USED' />
+        <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-2">
+          <TechIcon
+            key='ReactNative'
+            techName='React Native'
+            imgSrc={ReactJSIcon}
+          />
+          <TechIcon
+            key='NodeJs'
+            techName='NodeJs'
+            imgSrc={NodeJsIcon}
+          />
+          <TechIcon
+            key='Java'
+            techName='Java'
+            imgSrc={JavaIcon}
+          />
+          <TechIcon
+            key='Swift'
+            techName='Swift'
+            imgSrc={SwiftIcon}
+          />
+        </div>
+      </SecondaryBlueBg>
     </>
   )
 }

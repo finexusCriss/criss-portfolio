@@ -7,6 +7,8 @@ import SpreadSheetIcon from '../assets/images/Spreadsheet.png';
 import TechIcon from "~/components/TechIcon";
 import BodyLightBlueBg from "~/components/layout/BodyLightBlueBg";
 import TravelItineraryExample from '../assets/images/ItiDetails.png';
+import LightWide from "~/components/typography/LightWide";
+import ReactJSIcon from '../assets/images/techIcon/React.png';
 
 export default function TravelItinerary() {
   return (
@@ -45,6 +47,21 @@ export default function TravelItinerary() {
         />
       </BodyLightBlueBg>
 
+      <SecondaryBlueBg>
+        <LightWide text='TECH USED' />
+        <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-2 gap-2">
+          <TechIcon
+            key='Spreadsheet'
+            techName='Spreadsheet'
+            imgSrc={SpreadSheetIcon}
+          />
+          <TechIcon
+            key='ReactJS'
+            techName='ReactJS'
+            imgSrc={ReactJSIcon}
+          />
+        </div>
+      </SecondaryBlueBg>
     </>
 
   )

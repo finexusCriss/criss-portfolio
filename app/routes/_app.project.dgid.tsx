@@ -10,6 +10,8 @@ import SecureEnclaveIcon from '../assets/images/SecureEnclave.png';
 import Fido2Icon from '../assets/images/FIDO2.png';
 import AWSRekogIcon from '../assets/images/Rekognition.png'; 
 import PassportNFCIcon from '../assets/images/PassportNFC.png'; 
+import LightWide from "~/components/typography/LightWide";
+import RemixIcon from '../assets/images/techIcon/Remix.png';
 
 export default function DigitalID() {
   return (
@@ -77,6 +79,22 @@ export default function DigitalID() {
           body='To enhance the level of confidence for eKYC, I have integrated with passport NFC scanner as most iOS phone has the NFC feature. This uses an open source library that enable the use of passport NFC scanner, and I have studied on CSCA certificates that ensure the passport is valid and has not been tampered.'
         />
       </SecondaryBlueBg>
+
+      <BodyLightBlueBg>
+        <LightWide text='TECH USED' />
+        <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-2 gap-2">
+          <TechIcon
+            key='SwiftUI'
+            techName='SwiftUI'
+            imgSrc={SwiftUIIcon}
+          />
+          <TechIcon
+            key='Remix'
+            techName='Remix'
+            imgSrc={RemixIcon}
+          />
+        </div>
+      </BodyLightBlueBg>
     </>
   )
 }

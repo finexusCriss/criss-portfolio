@@ -114,11 +114,23 @@ export default function About() {
     onscreen: {
       x: 0,
       transition: {
-        type: "spring",
-        duration: 0.8
+        // type: "spring",
+        duration: 0.8,
       }
     }
   };
+
+  const elegantAppear: Variants = {
+    offscreen: {
+      opacity: 0,
+    },
+    onscreen: {
+      opacity: 1,
+      transition: {
+        duration: 0.8
+      }
+    }
+  }
 
   return (
     <>
@@ -173,7 +185,8 @@ export default function About() {
           viewport={{ once: true, amount: 0.8 }}
         >
           <motion.div
-            variants={slideInFromRight}
+            // variants={slideInFromRight}
+            variants={elegantAppear}
           >
             <img src={ProjectIcon} alt="MyProjectIcon" className='w-48' />
           </motion.div>

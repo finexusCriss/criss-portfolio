@@ -60,6 +60,24 @@ export default function FaceLiveness() {
           body='The difficulties of this project is not only in the complicated logic of detecting the head motion, but the parameters make it very difficult for one to spoof the system yet easy enough for a real person to pass the verification. As a physics degree graduate, I have utilised the experimental method to find the sweet spots and the results are proven to be useful.'
         />
       </BodyLightBlueBg>
+
+      <SecondaryBlueBg>
+        <div className="font-notoSerifJPLight text-text-title-dark-blue mb-6 tracking-wider">
+          TECH USED
+        </div>
+        <div className="grid grid-rows-1 grid-cols-2 gap-2">
+          <TechIcon
+            key='React'
+            techName='ReactJS'
+            imgSrc={ReactJSIcon}
+          />
+          <TechIcon
+            key='TensorFlow'
+            techName='TensorFlow'
+            imgSrc={TensorFlowIcon}
+          />
+        </div>
+      </SecondaryBlueBg>
     </>
   )
 }
