@@ -6,7 +6,7 @@ import GeneralErrorPage from '~/error/GeneralErrorPage';
 export const meta: MetaFunction = () => {
   return [
     { title: "Criss Portfolio" },
-    { name: "description", content: "Welcome to Remix!" },
+    { name: "description", content: "An updated latest portfolio of Criss in 2024." },
   ];
 };
 
