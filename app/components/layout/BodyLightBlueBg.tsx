@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import elegantAppear from "~/config/framerMotion";
+import elegantAppear from "~/config/FramerMotion/framerMotion";
 
 interface Props {
   children: ReactNode;

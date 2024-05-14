@@ -77,7 +77,7 @@ export default function Navbar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5 }}
                 // className={`fixed left-0 right-0 top-[${navBarHeight}rem] p-5 bg-[#367bc1] z-50`} // Dynamic navBarHeight, but doesn't work in production
                 // className={`fixed left-0 right-0 top-[5.5rem] p-5 bg-[#367bc1] z-50`} // Hard coded navBarHeight to 5.5rem
                 className={`absolute left-0 right-0 top-[5.5rem] p-5 bg-[#367bc1] z-50`} // Using absolute position
